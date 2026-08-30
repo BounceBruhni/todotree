@@ -55,6 +55,12 @@ public class DynamicLengthArray {
             _array = new Object[_length + 1];
             _array[0] = newElement;
         }
+        else {
+            Object[] newArray = new Object[_length + 1];
+            //Copy existing values to newArray
+            _array = newArray;
+            _array[_length] = newElement;
+        }
         return  _array;
     }
     //public insertAtIndex(new_element) Adds new element to the array at a position
